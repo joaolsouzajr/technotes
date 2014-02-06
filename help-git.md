@@ -4,37 +4,36 @@ https://help.github.com/articles/set-up-github
 
 Configurações globais de nome e email respectivamente:
 
-	git config --global user.name "seu nome"
-	git config --global user.email "seu email"
+	$ git config --global user.name "seu nome"
+	$ git config --global user.email "seu email"
 
 
 ## Gerando chaves SSH
 
-Step 1 - Verificando Chaves
-  $ cd ~/.ssh 
+#### Step 1 - Verificando Chaves
+	$ cd ~/.ssh 
 
-Step 2 - Fazendo backup e deletando chaves antigas
-  $ ls
-  $ mkdir key_backup
-  $ cp id_rsa* key_backup
-  $ rm id_rsa*
+#### Step 2 - Fazendo backup e deletando chaves antigas
+	$ ls
+  	$ mkdir key_backup
+  	$ cp id_rsa* key_backup
+  	$ rm id_rsa*
   
-Step 3 - Gerando novas chaves
-  $ ssh-keygen -t rsa -C "your_email@youremail.com"
+#### Step 3 - Gerando novas chaves
+  	$ ssh-keygen -t rsa -C "your_email@youremail.com"
   
-  #Your identification has been saved in /home/you/.ssh/id_rsa.
-  #Your public key has been saved in /home/you/.ssh/id_rsa.pub.
+  	#Your identification has been saved in /home/you/.ssh/id_rsa.
+  	#Your public key has been saved in /home/you/.ssh/id_rsa.pub.
 
-Step 4 - Configurando chaves ssh no github
-  # copiar todo o conteudo de id_rsa.pub no github
-  # 1. Va para Account Settings
-  # 2. Clique em SSHKeys
-  # 3. Clique "Add SSH key"
-  # 4. Cole a chave de  id_rsa.pub no campo "Key"
-  # 5. Clique "Add key"
+#### Step 4 - Configurando chaves ssh no github copiar todo o conteudo de id_rsa.pub no github
+	1. Va para Account Settings
+  	2. Clique em SSHKeys
+  	3. Clique "Add SSH key"
+  	4. Cole a chave de  id_rsa.pub no campo "Key"
+  	5. Clique "Add key"
 
-Step 5 - Testando autenticação
-  $ ssh -T git@github.com
+#### Step 5 - Testando autenticação
+	$ ssh -T git@github.com
 
 
 Step 6 -  Criando Breanch
