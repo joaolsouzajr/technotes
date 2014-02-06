@@ -1,4 +1,4 @@
-Help git
+# Help git
 
 https://help.github.com/articles/set-up-github
 
@@ -8,7 +8,7 @@ git config --global user.name "seu nome"
 git config --global user.email "seu email"
 
 
-Gerando chaves SSH
+## Gerando chaves SSH
 
 Step 1 - Verificando Chaves
   $ cd ~/.ssh 
