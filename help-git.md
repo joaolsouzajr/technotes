@@ -4,8 +4,8 @@ https://help.github.com/articles/set-up-github
 
 Configurações globais de nome e email respectivamente:
 
-git config --global user.name "seu nome"
-git config --global user.email "seu email"
+	git config --global user.name "seu nome"
+	git config --global user.email "seu email"
 
 
 ## Gerando chaves SSH
