@@ -1,43 +1,53 @@
-Help comandos
-==
-
-Extrair arquivos
-
-Extrair .zip
-$ unzip file.zip -d [diretorio destino]
-
-Extrair .taz.gz
-$ taz -zxvf [file].tar.gz
-
-Compactar .zip
-$zip -r [arquivo].zip <dir/arq>
-
-Comapctar .tar.gz
-$tar -czvf [novo arquivo].tar.gz <arq1 dir1 arq2 dir2 ...>
-
-Compactar .tar
-$tar -cvf [novo arquivo].tar <arq1 dir1 arq2 dir2 ...>
-
-Compactar .gz
-$gzip [arquivo].tar
-
-Listar processo ativos filtrando pelo nome
-$ ps aux | grepe [filtro]
+# Help comandos
 
 
-Formatar PenDrive
+## Extrair arquivos
 
-1. Localizar onde o pendriver esta montado.
-$ sudo mount
+#### Extrair .zip
 
-2. Desmontar pendrive
-$ sudo umount /dev/<unidade> #ex.: sudo umount  /dev/sdb1
+    $ unzip file.zip -d [diretorio destino]
 
-3. Formatar pendrive com fat32.
-$ mkfs.ntfs /dev/<unidade>
+#### Extrair .taz.gz
 
-3.1 NTFS
-$ ntfslabel /dev/sdb1 <novo nome pendrive> 
+    $ taz -zxvf [file].tar.gz
+
+#### Compactar .zip
+
+    $zip -r [arquivo].zip <dir/arq>
+
+#### Comapctar .tar.gz
+
+    $tar -czvf [novo arquivo].tar.gz <arq1 dir1 arq2 dir2 ...>
+
+#### Compactar .tar
+
+    $tar -cvf [novo arquivo].tar <arq1 dir1 arq2 dir2 ...>
+
+#### Compactar .gz
+
+    $gzip [arquivo].tar
+
+#### Listar processo ativos filtrando pelo nome
+
+    $ ps aux | grepe [filtro]
+
+
+#### Formatar PenDrive
+
+ 1. Localizar onde o pendriver esta montado.
+   
+    $ sudo mount
+
+ 2. Desmontar pendrive
+    
+    $ sudo umount /dev/<unidade> #ex.: sudo umount  /dev/sdb1
+
+ 3. Formatar pendrive com fat32.
+     
+    $ mkfs.ntfs /dev/<unidade>
+
+     3.1 NTFS
+         $ ntfslabel /dev/sdb1 <novo nome pendrive> 
 
 Renomear PenDrive
 
