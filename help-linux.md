@@ -34,13 +34,13 @@
 
 #### Formatar PenDrive
 
- 1. Localizar onde o pendriver esta montado.
+    1. Localizar onde o pendriver esta montado.
    
-    $ sudo mount
+        $ sudo mount
 
- 2. Desmontar pendrive
+    2. Desmontar pendrive
     
-    $ sudo umount /dev/<unidade> #ex.: sudo umount  /dev/sdb1
+        $ sudo umount /dev/<unidade> #ex.: sudo umount  /dev/sdb1
 
  3. Formatar pendrive com fat32.
      
@@ -49,7 +49,7 @@
      3.1 NTFS
          $ ntfslabel /dev/sdb1 <novo nome pendrive> 
 
-Renomear PenDrive
+#### Renomear PenDrive
 
 1. Intalar dosfstools se não existir.
 $ sudo yum install dosfstools
