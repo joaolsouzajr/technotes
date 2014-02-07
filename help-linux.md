@@ -36,18 +36,19 @@
 
 
 1. Localizar onde o pendriver esta montado.
-    
-    $ sudo mount
+
+        $ sudo mount
 
 2. Desmontar pendrive
 
-    $ sudo umount /dev/<unidade> #ex.: sudo umount  /dev/sdb1
+        $ sudo umount /dev/<unidade> #ex.: sudo umount  /dev/sdb1
 
 3. Formatar pendrive com fat32.
 
-    $ mkfs.ntfs /dev/<unidade>
+            $ mkfs.ntfs /dev/<unidade>
 
 3.1 NTFS
+
     $ ntfslabel /dev/sdb1 <novo nome pendrive> 
 
 #### Renomear PenDrive
