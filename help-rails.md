@@ -1,19 +1,18 @@
+## Criando novo Contrller
+  
+  $ rails generate <Nome Controller> <action1>  <action2> ... <actionn>
 
-Criando novo Contrller
+## Executar servidor
 
-$ rails generate <Nome Controller> <action1>  <action2> ... <actionn>
-
-Executar servidor
-
-$ rails server
+  $ rails server
 
 
-Criando scaffold Model
+## Criando scaffold Model
 
-$ rails generate scaffold <Entity> <prop1>:string <prop2>:decimal ... <propn>:<any type>
+  $ rails generate scaffold <Entity> <prop1>:string <prop2>:decimal ... <propn>:<any type>
 
-Configurando banco de dados de desenvolvimento
+## Configurando banco de dados de desenvolvimento
 
-$ rake db:migrate
+  $ rake db:migrate
 
 obs.: este comando usa as configurações do databese.yaml
