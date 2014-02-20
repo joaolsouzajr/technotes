@@ -53,23 +53,29 @@
 
 #### Renomear PenDrive
 
-1. Intalar dosfstools se não existir.
-$ sudo yum install dosfstools
+1. Instalar dosfstools se não existir.
+    
+    $ sudo yum install dosfstools
 
 2. Renomear
-$ sudo dosfslabel /dev/sdb1 <novo nome>
 
-Montar iso
+    $ sudo dosfslabel /dev/sdb1 <novo nome>
 
-$ mkdir -p /mnt/disk
-$ mount -o loop <arquivo>.iso /mnt/disk
+#### Montar iso
+
+    $ mkdir -p /mnt/disk
+    $ mount -o loop <arquivo>.iso /mnt/disk
  
 
-Listar pacotes instalados
+#### Listar pacotes instalados -RPM
 
-$ rpm -qa | grep <nome-pacote>
+    $ rpm -qa | grep <nome-pacote>
+    
+#### Listar pacotes instalados - DEB
 
-VIM
+    $ 
+
+Vim
 =
 Navegar entre janelas do vim: <Ctrl + W>
 
@@ -120,7 +126,7 @@ ctrl-b %   Split pane vertically
 ctrl-b ,   Rename current window
 ctrl-b o   Move to next pane
 
-CRiPTOGRAFIA
+Criptografia
 =
 
 Encriptando dados
