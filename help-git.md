@@ -36,18 +36,94 @@ Configurações globais de nome e email respectivamente:
 	$ ssh -T git@github.com
 
 
-Step 6 -  Criando Breanch
+#### Step 6 -  Criando Breanch
 	$ git branch <nome_branch> #criando breanch
 	$ git checkout <nome_branch> #muda para a branch
 	# lembrar que a branch do git nao é como no SVN
 	
 
-Inicialiazando um repository local com git.
-$ cd /path/to/my/repo
-$ git remote add origin https://joaosouza@bitbucket.org/ibsoft/ibsoft-suporte.git
-$ git push -u origin master   # to push changes for the first time
+#### Inicialiazando um repository local com git.
+
+	$ cd /path/to/my/repo
+	$ git remote add origin https://joaosouza@bitbucket.org/ibsoft/ibsoft-suporte.git
+	$ git push -u origin master   # to push changes for the first time
 
   
+
+#### Explicações sobre GIT
+ 
+#### Inicializando e reinicializando repositorio:
+$ git init
+ 
+#### Colonando um repositorio existente:
+$ git clone [url] //pode se usar os protocolos ssh, https e git
+
+#### Adicionado repositorio remoto:
+$ git remote add [nome] [url]
+
+#### Criando branch:
+$ git branch [nome]
+
+#### Mudando para uma branch:
+$ git checkout [nome da branch]
+
+#### Deletar branch
+$ git branch -d [nome da branch]
+
+#### Deletar branch remotamente
+$ git push [remote] :[nome da branch] 
+
+#### Pegando as alterações antes do merge
+$ git rebase [branch base]
+
+#### Empurrando alterações no repositorio remoto
+$ git push [remote] [branch]
+
+#### Obetendo alterações do repositorio remoto na branch corrente
+$ git pull [remote]
+
+
+#### Criando Tags: O Git permite criar dois tipos de tag (lightweight e  annotated),
+lightweight, é semelhante  um branch já o tipo annotated, cria um copia de tudo.
+
+* Annotaqted:
+
+	$ git tag -a [nome da tag] -m "comentarios da tag"
+
+* Lightweight:
+
+	$ git tag [nome da tag]-lw
+
+* Removendo tag
+
+	$ git tag -d [nome da tag] 
+
+* Push nova tag
+	
+	$ git push origin [nome da tag]
+
+#### Merge:
+
+	$ git merge [branch]
+
+#### Resolvendo conflito manual:
+
+	$ git mergetool
+
+#### Recuperando alteracoes do ramo descendente
+
+	$ rebase [nome do ramo descenentes] #exemplo.: rebase master
+
+#### Restaurando remote repo
+
+	$ git fatch origin
+	$ git reset --hard origin/master
+
+
+
+#### Estados do documento: untracked, unmodified, modified, staged
+
+
 OpenShift
 
 
@@ -56,77 +132,9 @@ INstalando Red Hat Client
   $ sudo gem install rhc
   
   
-  
 $ mkdir /path/to/your/project
 $ cd /path/to/your/project
 $ git init
 $ git remote add origin ssh://git@bitbucket.org/joaosouza/praticas-git.git
   
   
- Explicações sobre GIT
- 
-Inicializando e reinicializando repositorio:
-$ git init
- 
-Colonando um repositorio existente:
-$ git clone [url] //pode se usar os protocolos ssh, https e git
-
-Adicionado repositorio remoto:
-$ git remote add [nome] [url]
-
-Criando branch:
-$ git branch [nome]
-
-Mudando para uma branch:
-$ git checkout [nome da branch]
-
-Deletar branch
-$ git branch -d [nome da branch]
-
-Deletar branch remotamente
-$ git push [remote] :[nome da branch] 
-
-Pegando as alterações antes do merge
-$ git rebase [branch base]
-
-Empurrando alterações no repositorio remoto
-$ git push [remote] [branch]
-
-Obetendo alterações do repositorio remoto na branch corrente
-$ git pull [remote]
-
-
-Criando Tags: O Git permite criar dois tipos de tag (lightweight e  annotated),
-lightweight, é semelhante  um branch já o tipo annotated, cria um copia de tudo.
-
-Annotaqted:
-$ git tag -a [nome da tag] -m "comentarios da tag"
-
-Lightweight:
-$ git tag [nome da tag]-lw
-
-Removendo tag
-$ git tag -d [nome da tag] 
-
-Push nova tag
-$ git push origin [nome da tag]
-
-Merge:
-$ git merge [branch]
-
-Resolvendo conflito manual:
-$ git mergetool
-
-Recuperando alteracoes do ramo descendente
-$ rebase [nome do ramo descenentes] #exemplo.: rebase master
-
-Restaurando remote repo
-$ git fatch origin
-$ git reset --hard origin/master
-
-
-
-Estados do documento: untracked, unmodified, modified, staged
-
-
-Comparativo git and svn
