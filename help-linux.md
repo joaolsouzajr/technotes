@@ -73,7 +73,11 @@
     
 #### Listar pacotes instalados - DEB
 
-    $ 
+    $ dpkg -l | grep <nome-pacote>
+
+#### Renomear arquisp
+
+    $ rename (option) 's/oldname/newname'  pattern
 
 Vim
 =
