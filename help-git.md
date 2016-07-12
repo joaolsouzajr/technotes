@@ -99,7 +99,7 @@ lightweight, é semelhante  um branch já o tipo annotated, cria um copia de tud
 	$ git tag -d [nome da tag] 
 
 * Push nova tag
-	
+i	
 	$ git push origin [nome da tag]
 
 #### Merge:
@@ -119,7 +119,17 @@ lightweight, é semelhante  um branch já o tipo annotated, cria um copia de tud
 	$ git fatch origin
 	$ git reset --hard origin/master
 
+#### Obte,m last commit
 
+	git log -n 1 --pretty=format:"%H"  #To get only hash value of commit
+
+#### Show history 
+	
+	git log --follow <name fiele>
+
+#### Reverte from commit
+
+	git checkout <commit> <file>
 
 #### Estados do documento: untracked, unmodified, modified, staged
 
