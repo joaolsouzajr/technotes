@@ -79,73 +79,9 @@
 
     $ rename (option) 's/oldname/newname'  pattern
 
-Vim
-=
-Navegar entre janelas do vim: <Ctrl + W>
+#Iptables
 
-Navegar entre arquivos
-
-* Vai para o proximo: bn
-* Volta  para anterior: bp
-* Salva e vai para o proximo: wn
-* Vai para o proximo da lista: wp
-
-Tabs
-
-:tabedit {file}   edit specified file in a new tab
-:tabfind {file}   open a new tab with filename given, searching the 'path' to find it
-:tabclose         close current tab
-:tabclose {i}     close i-th tab
-:tabs         list all tabs including their displayed windows
-:tabm 0       move current tab to first
-:tabm         move current tab to last
-:tabm {i}     move current tab to position i+1
-:tabn         go to next tab
-:tabp         go to previous tab
-:tabfirst     go to first tab
-:tablast      go to last tab
-gt            go to next tab
-gT            go to previous tab
-{i}gt         go to tab in position i
-Ctrl-PgDn     go to next tab
-Ctrl-PgUp     go to previous tab
-
-Abrir arquivo no vim: e [caminho do arquivo]
-
-Copiando linha atual: yy
-
-Copiando 5 linhas: 5yy
-
-Colando : "+p
-
-Colando o que estiver no clipboard: <Shift + Insert>
-
-Deletando linha atual: dd
-
-Deletando 5 linhas: 5dd
-
-Desfaser: u
-
-Desfazer nudanças na ultima linha editada: U
-
-Refazer: <Ctrl + r> 
-
-Susbestituir palavras em todo o arquivo: % s/[antigo]/[novo]
-
-Substituir palavras na linha atual: s/[antigo]/[novo]
-
-Substituir palavras da linha 1 a 10: 1,10 s/[antigo]/[novo]
-
-Substituir palavras da linha 1 até o final: 1,$ s/[antigo]/[novo]
-
-Ignorando maisculas e minusculas na pesquisa: /\c[palavra]
-
-n #next
-N #previus
-
-:noh #off marcação
-
-
+iptables -A INPUT -p <prototcol> --dport <portnumber> -j ACCEPT
 
 
 TMUX
