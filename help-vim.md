@@ -63,7 +63,7 @@ N #previus
 plugins:
 
 [pathogen.vim](https://github.com/tpope/vim-pathogen)
-[ctrlp.vim](https://github.com/kien/ctrlp.vim)
+[ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
 [nerdtree](https://github.com/scrooloose/nerdtree)
 [syntastic](https://github.com/scrooloose/syntastic)
 [vim-hybrid](https://github.com/w0ng/vim-hybrid)
