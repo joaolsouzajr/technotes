@@ -1,7 +1,6 @@
 #!/bin/bash
 
 #zshell
-dnf install zsh -y
 chsh -s /usr/bin/zsh
 
 #oh-my-zsh
