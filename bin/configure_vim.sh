@@ -16,38 +16,13 @@ git clone https://github.com/vim-syntastic/syntastic.git
 #[vim-hybrid](https://github.com/w0ng/vim-hybrid)
 git clone https://github.com/w0ng/vim-hybrid.git
 
+mkdir ~/.vim/colors/
+cp ~/.vim/bundle/vim-hybrid/colors/hybrid.vim ~/.vim/colors/
+
 #[vim-javascript](https://github.com/pangloss/vim-javascript)
 git clone https://github.com/pangloss/vim-javascript.git
 
 #[vim-javascript-syntax](https://github.com/jelera/vim-javascript-syntax)
 git clone https://github.com/jelera/vim-javascript-syntax.git
 
-echo "execute pathogen#infect()                                                       
-
-syntax on                                                                       
-set t_Co=256                                                                    
-filetype plugin indent on                                                       
-
-set colorcolumn=80                                                              
-set textwidth=80                                                                
-autocmd BufRead *.md,*.txt set tw=100                                           
-autocmd FileType c,cpp,java,groovy,javascript autocmd BufWritePre <buffer> %s/\s\+$//e
-
-set tabstop=2                                                                   
-set shiftwidth=2                                                               
-set softtabstop=2                                                               
-set expandtab                                                                   
-
-set background=dark                                                             
-colorscheme hybrid                                                              
-
-let g:javascript_plugin_jsdoc = 1                                               
-
-set statusline+=%#warningmsg#                                                   
-set statusline+=%{SyntasticStatuslineFlag()}                                    
-set statusline+=%*                                                              
-
-let g:syntastic_always_populate_loc_list = 1                                    
-let g:syntastic_auto_loc_list = 1                                               
-let g:syntastic_check_on_open = 1                                               
-let g:syntastic_check_on_wq = 0" >> ~/.vimrc
+curl -LSso ~/.vimrc https://gist.githubusercontent.com/lourencoccc/bc14e77a3c77b2aad5c67760303d1fbe/raw/43334d67474d3e6412d45e31b1dabd71c2a6a179/vimrc 
