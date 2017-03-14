@@ -11,6 +11,7 @@ dnf install shutter -y
 dnf install pencil -y
 dnf install vagrant -y
 dnf install texmaker -y
+dnf install zsh -y
 dnf install dkms -y
 dnf install kernel-devel -y
 dnf group install 'C Development Tools and Libraries' -y

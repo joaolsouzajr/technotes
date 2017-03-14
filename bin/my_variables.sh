@@ -7,7 +7,8 @@
 export JAVA_HOME=$HOME/.jenv/candidates/java/current
 export PATH=$PATH:$JAVA_HOME/bin
 
-export M2_HOME=$HOME/.jenv/candidates/maven/current
+export M2_HOME=$HOME/.sdkman/candidates/maven/current
+export PATH=$PATH:$M2_HOME/bin
 
 export GRADLE_HOME=$HOME/.sdkman/candidates/gradle/current
 export GRADLE_OPTS=-Xms256m' '-Xmx512m

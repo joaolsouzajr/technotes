@@ -7,6 +7,6 @@ mkdir $HOME/unifor
 mkdir $HOME/coursera
 
 cd $HOME
-git clone https://github.com/lourencoccc/help.git
+#git clone https://github.com/lourencoccc/help.git
 
 

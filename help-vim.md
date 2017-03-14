@@ -1,8 +1,7 @@
 # Help comandos
 
-Vim
-=
-Navegar entre janelas do vim: <Ctrl + W>
+# Vim
+Navegar entre janelas do vim:
 
 Navegar entre arquivos
 
