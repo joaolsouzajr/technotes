@@ -4,7 +4,7 @@
 #export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.60.x86_64
 
 #Current JVM from jvm
-export JAVA_HOME=$HOME/.jenv/candidates/java/current
+export JAVA_HOME=$HOME/.sdkman/candidates/java/current
 export PATH=$PATH:$JAVA_HOME/bin
 
 export M2_HOME=$HOME/.sdkman/candidates/maven/current
@@ -19,6 +19,8 @@ export GROOVY_HOME=$HOME/.sdkman/candidates/groovy/current
 
 export PATH=$PATH:$GROOVY_HOME/bin
 export PATH=$PATH:$GRADLE_HOME/bin
+
+export ANDROID_SDK_ROOT=$HOME/Android/Sdk
 
 #export JBOSS_HOME=$HOME/Dev/atlantico/coelce/dev/appserver/wildfly-8.1.0.Final
 #export PATH=$PATH:$JBOSS_HOME/bin
