@@ -17,7 +17,7 @@ sdk install gradle
 sdk install grails
 sdk install springboot
 
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
 source $HOME/.nvm/nvm.sh
 nvm install v6.9.2
 

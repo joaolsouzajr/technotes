@@ -25,4 +25,6 @@ git clone https://github.com/pangloss/vim-javascript.git
 #[vim-javascript-syntax](https://github.com/jelera/vim-javascript-syntax)
 git clone https://github.com/jelera/vim-javascript-syntax.git
 
+git clone https://github.com/editorconfig/editorconfig-vim.git
+
 curl -LSso ~/.vimrc https://gist.githubusercontent.com/lourencoccc/bc14e77a3c77b2aad5c67760303d1fbe/raw/43334d67474d3e6412d45e31b1dabd71c2a6a179/vimrc 
