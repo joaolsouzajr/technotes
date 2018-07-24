@@ -1,23 +1,49 @@
-#!/bin/bash
+#!/bin/sh
 
-#utils
-dnf install vim -y
-dnf install git -y
-dnf install svn -y
-dnf install terminator -y
-dnf install util-linux-user -y
-dnf install htop -y
-dnf install texmaker -y
-dnf install zsh -y
-dnf install dkms -y
-dnf install kernel-devel -y
-dnf group install 'C Development Tools and Libraries' -y
-#rpmfusion no free
-su -c 'dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm'
-dnf install unrar -y
+aptcmd()
+{
+	echo "Debian like, apt-get commands"
+	apt-get install vim -y
+	apt-get install git -y
+	apt-get install svn -y
+	apt-get install util-linux -y
+	apt-get install htop -y
+	apt-get install	zsh -y
+	apt-get install zip -y
+	apt-get install curl -y
+	apt-get install dkms -y
+	apt-get install sudo -y
+  apt-get install net-tools -y
+  apt-get instlal openssh-server -y
+	apt-get install apt-transport-https -y
+}
 
-#https://code.visualstudio.com/docs/setup/linux#_rhel-fedora-and-centos-based-distributions
-rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
-dnf check-update
-dnf install code -y
+dnfcmd()
+{
+	echo "Red Hat like, dnf commands"
+	#utils
+	dnf install vim -y
+	dnf install git -y
+	dnf install svn -y
+	dnf install util-linux-user -y
+	dnf install htop -y
+	dnf install zsh -y
+	dnf install curl -y
+	dnf install dkms -y
+	#rpmfusion no free
+	su -c 'dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm'
+	dnf install unrar -y
+}
+
+apt-get --help > /dev/null 2>&1
+has_apt=$?
+dnf --help > /dev/null 2>&1
+has_dnf=$?
+
+if [ "$has_apt" -eq "0" ]; then
+	aptcmd
+fi
+if [ "$has_dnf" -eq "0" ]; then
+	dnfcmd
+fi
+

@@ -11,7 +11,7 @@ git clone https://github.com/ctrlpvim/ctrlp.vim.git
 git clone https://github.com/scrooloose/nerdtree.git
 
 #[syntastic](https://github.com/scrooloose/syntastic)
-git clone https://github.com/vim-syntastic/syntastic.git
+#git clone https://github.com/vim-syntastic/syntastic.git
 
 #[vim-hybrid](https://github.com/w0ng/vim-hybrid)
 git clone https://github.com/w0ng/vim-hybrid.git
@@ -23,7 +23,7 @@ cp ~/.vim/bundle/vim-hybrid/colors/hybrid.vim ~/.vim/colors/
 git clone https://github.com/pangloss/vim-javascript.git
 
 #[vim-javascript-syntax](https://github.com/jelera/vim-javascript-syntax)
-git clone https://github.com/jelera/vim-javascript-syntax.git
+#git clone https://github.com/jelera/vim-javascript-syntax.git
 
 git clone https://github.com/editorconfig/editorconfig-vim.git
 
