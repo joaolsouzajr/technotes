@@ -76,13 +76,20 @@
         mount -o loop <arquivo>.iso /mnt/disk
  
 
-#### Listar pacotes instalados -RPM
+## Instalação de Pacotes
+
+### Listar pacotes instalados -RPM
 
         rpm -qa | grep <nome-pacote>
     
-#### Listar pacotes instalados - DEB
+### Listar pacotes instalados - DEB
 
         dpkg -l | grep <nome-pacote>
+
+### Instalar pacotes
+
+        dpkg -i *.deb
+        apt-get install -f #se for identificado dependencias faltantes 
 
 #### Renomear arquisp
 
