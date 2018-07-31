@@ -24,12 +24,14 @@ git clone  https://github.com/flazz/vim-colorschemes.git \
   ~/.vim/bundle/colorschemes
 
 #[vim-javascript](https://github.com/pangloss/vim-javascript)
-git clone https://github.com/pangloss/vim-javascript.git
+git clone https://github.com/pangloss/vim-javascript.git \
+  ~/.vim/bundle/vim-javascript
 
 #[vim-javascript-syntax](https://github.com/jelera/vim-javascript-syntax)
 #git clone https://github.com/jelera/vim-javascript-syntax.git
 
-git clone https://github.com/editorconfig/editorconfig-vim.git
+git clone https://github.com/editorconfig/editorconfig-vim.git \
+  ~/.vim/bundle/editorconfig-vim
 
 curl -LSso ~/.vimrc \
   https://gist.githubusercontent.com/lourencoccc/bc14e77a3c77b2aad5c67760303d1fbe/raw/20fda3d32eda02dfdbfe9d6bf9bc33a8c2acfc3b/vimrc 
