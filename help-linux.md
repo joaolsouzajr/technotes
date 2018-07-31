@@ -91,7 +91,7 @@
         dpkg -i *.deb
         apt-get install -f #se for identificado dependencias faltantes 
 
-#### Renomear arquisp
+## Renomear arquivos
 
         rename (option) 's/oldname/newname'  pattern
 
@@ -155,3 +155,19 @@ $ gpg --delete-key usuario
 
 Mudando sua Frase Senha
 $ gpg --edit-key
+
+## LVM
+
+umount /home
+vgdisplay 
+pvdisplay 
+e2fsck -f /dev/mapper/mylaptop--vg-home 
+fdisk -l
+resize2fs /dev/mapper/mylaptop--vg-home 400G
+lvreduce -L -22G /dev/mapper/mylaptop--vg-home
+pvdisplay
+lvdisplay
+vgdisplay
+mount -a
+lvextend -L +16G /dev/mapper/mylaptop--vg-var
+resize2fs /dev/mapper/mylaptop--vg-var
