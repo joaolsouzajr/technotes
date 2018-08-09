@@ -59,6 +59,24 @@ N #previus
 
 :noh #off marcação
 
+## Pesquisa no conteudo dos arquivos
+
+Usar o grep para buscar conteudo:
+
+    :grep 'main(' **/*.java #encontra todos os arquivos *.java nos diretorios abaixo do :pwd
+
+Visualizar resultado da pesquisa
+
+    :copen #abrir lista de arquivos encontrados
+    :cclose #fechar lista de arquivos encontrados
+    :cn #selecionar proximo arquivo
+    :cp #selecionar arquivo anterior
+
+
+
+
+
+
 plugins:
 
 [pathogen.vim](https://github.com/tpope/vim-pathogen)
