@@ -53,39 +53,51 @@ Configurações globais de nome e email respectivamente:
 #### Explicações sobre GIT
  
 #### Inicializando e reinicializando repositorio:
-$ git init
+
+  git init
  
 #### Colonando um repositorio existente:
-$ git clone [url] //pode se usar os protocolos ssh, https e git
+
+  git clone [url] //pode se usar os protocolos ssh, https e git
 
 #### Adicionado repositorio remoto:
-$ git remote add [nome] [url]
+
+  git remote add [nome] [url]
 
 #### Criando branch:
-$ git branch [nome]
-$ git checkout -b [nome]
+
+  git branch [nome]
+
+  git checkout -b [nome]
 
 #### Mudando para uma branch:
-$ git checkout [nome da branch]
+
+  git checkout [nome da branch]
 
 #### Recuperando a partir da branch remota
-$ git checkout -b [mybranch] [remote]/[mybranch]
+  
+  git checkout -b [mybranch] [remote]/[mybranch]
 
 #### Deletar branch
-$ git branch -d [nome da branch]
-$ git push [remote] :[nome da branch] #deletar remotamente
+  
+  git branch -d [nome da branch]
+  git push [remote] :[nome da branch] #deletar remotamente
 
 ### Visualizar todas as branchs
-$ git branch -v -a
+
+  git branch -v -a
 
 #### Pegando as alterações antes do merge
-$ git rebase [branch base]
+
+  git rebase [branch base]
 
 #### Empurrando alterações no repositorio remoto
-$ git push [remote] [branch]
+
+  git push [remote] [branch]
 
 #### Obetendo alterações do repositorio remoto na branch corrente
-$ git pull [remote]
+
+  git pull [remote]
 
 
 #### Criando Tags: O Git permite criar dois tipos de tag (lightweight e  annotated),
