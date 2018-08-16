@@ -63,15 +63,20 @@ $ git remote add [nome] [url]
 
 #### Criando branch:
 $ git branch [nome]
+$ git checkout -b [nome]
 
 #### Mudando para uma branch:
 $ git checkout [nome da branch]
 
+#### Recuperando a partir da branch remota
+$ git checkout -b [mybranch] [remote]/[mybranch]
+
 #### Deletar branch
 $ git branch -d [nome da branch]
+$ git push [remote] :[nome da branch] #deletar remotamente
 
-#### Deletar branch remotamente
-$ git push [remote] :[nome da branch] 
+### Visualizar todas as branchs
+$ git branch -v -a
 
 #### Pegando as alterações antes do merge
 $ git rebase [branch base]
@@ -119,7 +124,7 @@ i
 	$ git fatch origin
 	$ git reset --hard origin/master
 
-#### Obte,m last commit
+#### Obtem ultimo commit
 
 	git log -n 1 --pretty=format:"%H"  #To get only hash value of commit
 
