@@ -1,6 +1,14 @@
 # Dicas Desenvolvimento Python
 
-### Vistualenv
+
+## Instalando Pip
+
+  https://pip.pypa.io/en/stable/installing/
+  curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+  python3 get-pip.py
+
+
+### Virtualenv
 
 #### Instalando virtualenv
 
