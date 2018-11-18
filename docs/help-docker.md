@@ -96,5 +96,8 @@ sudo usermod -aG docker $(whoami)
 5. Push to hub
 
 		docker push lourencoccc/docker-whale
+		
+#cria novo arquivo em tmp
+docker run -it -v $PWD/volume:/tmp fedora touch /tmp/novoarq.txt
 
 
