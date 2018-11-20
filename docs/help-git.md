@@ -112,24 +112,25 @@ Remote
 	git pull [remote]
 
 
-#### Criando Tags: O Git permite criar dois tipos de tag (lightweight e  annotated),
+#### Criando Tags: O Git permite criar dois tipos de tag (lightweight e  annotated)
+
 lightweight, é semelhante  um branch já o tipo annotated, cria um copia de tudo.
 
-* Annotaqted:
+**Annotaqted**
 
-	$ git tag -a [nome da tag] -m "comentarios da tag"
+	git tag -a [nome da tag] -m "comentarios da tag"
 
-* Lightweight:
+**Lightweight:**
 
-	$ git tag [nome da tag]-lw
+	git tag [nome da tag] -lw
 
-* Removendo tag
+**Removendo tag:**
 
-	$ git tag -d [nome da tag] 
+	git tag -d [nome da tag] 
 
-* Push nova tag
+**Push nova tag:**
 i	
-	$ git push origin [nome da tag]
+	git push origin [nome da tag]
 
 #### Merge:
 
