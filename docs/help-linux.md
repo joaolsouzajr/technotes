@@ -158,16 +158,16 @@ $ gpg --edit-key
 
 ## LVM
 
-umount /home
-vgdisplay 
-pvdisplay 
-e2fsck -f /dev/mapper/mylaptop--vg-home 
-fdisk -l
-resize2fs /dev/mapper/mylaptop--vg-home 400G
-lvreduce -L -22G /dev/mapper/mylaptop--vg-home
-pvdisplay
-lvdisplay
-vgdisplay
-mount -a
-lvextend -L +16G /dev/mapper/mylaptop--vg-var
-resize2fs /dev/mapper/mylaptop--vg-var
+  umount /home
+  vgdisplay 
+  pvdisplay 
+  e2fsck -f /dev/mapper/mylaptop--vg-home 
+  fdisk -l
+  resize2fs /dev/mapper/mylaptop--vg-home 400G
+  lvreduce -L -22G /dev/mapper/mylaptop--vg-home
+  pvdisplay
+  lvdisplay
+  vgdisplay
+  mount -a
+  lvextend -L +16G /dev/mapper/mylaptop--vg-var
+  resize2fs /dev/mapper/mylaptop--vg-var
