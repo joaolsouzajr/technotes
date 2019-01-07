@@ -23,6 +23,8 @@ git clone https://github.com/vim-airline/vim-airline-themes \
 git clone  https://github.com/flazz/vim-colorschemes.git \
   ~/.vim/bundle/colorschemes
 
+cp ~/.vim/bundle/vim-colorschemes/colors/* colors/
+
 #[vim-javascript](https://github.com/pangloss/vim-javascript)
 git clone https://github.com/pangloss/vim-javascript.git \
   ~/.vim/bundle/vim-javascript
