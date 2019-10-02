@@ -160,3 +160,8 @@ i
 #### Reverte from commit
 
 	git checkout <commit> <file>
+	
+
+#### Reset credential
+
+	git config --system --unset credential.helper

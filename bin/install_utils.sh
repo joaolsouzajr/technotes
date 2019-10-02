@@ -13,8 +13,8 @@ aptcmd()
 	apt-get install curl -y
 	apt-get install dkms -y
 	apt-get install sudo -y
-  apt-get install net-tools -y
-  apt-get instlal openssh-server -y
+  	apt-get install net-tools -y
+  	apt-get instlal openssh-server -y
 	apt-get install apt-transport-https -y
 }
 
