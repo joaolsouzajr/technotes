@@ -40,17 +40,34 @@ Create spring project
 
 Create micronaut project
 
+## Language
 
-## IDEs
+https://blog.caelum.com.br/o-minimo-que-voce-deve-saber-de-java-10/
+https://www.infoq.com/br/articles/java-10-var-type/
+https://www.pluralsight.com/blog/software-development/java-9-new-features
+https://www.infoq.com/br/news/2013/10/tudo-sobre-java-8/    
+
+## Tools
 
 * VSCode
 * Intelij IDE
+* Maven
+* Gradle
+* [LiveReload](http://livereload.com/)
+* [Spring Boot Maven Plugin](https://docs.spring.io/spring-boot/docs/current/maven-plugin/plugin-info.html)
+* [Spring Boot Gradle Plugin](https://docs.spring.io/spring-boot/docs/current/gradle-plugin/reference/html/)
+* https://projectlombok.org/
 
-## Sprint Start
+## Start Spring
 
-curl -H 'Accept: application/json' https://start.spring.io
+For create spring project is recomended to use the webapp 
+[Start Sprin](https://start.spring.io).
 
-Options:
+Command to see all options:
+
+    curl -H 'Accept: application/json' https://start.spring.io
+
+Options summary:
 
 * groupId, artifactId version, name, description and packageName
 * dependencies  
@@ -62,5 +79,12 @@ Options:
 * applicationName
 * baseDir
 
-curl.exe https://start.spring.io/starter.zip -d groupId=sia -d artifactId=taco-cloud -d version=0.0.1-SNAPSHOT -d name=taco-cloud -d description='Taco Cloud Example' -d packageName=tacos -d dependencies=web,devtools,thymeleaf -d language=java -d type=maven-project -o taco-cloud.zip
+Example of command to create a simple spring boot project:
+
+    curl.exe https://start.spring.io/starter.zip -d groupId=sia -d artifactId=taco-cloud -d version=0.0.1-SNAPSHOT -d name=taco-cloud -d description='Taco Cloud Example' -d packageName=tacos -d dependencies=web,devtools,thymeleaf -d language=java -d type=maven-project -o taco-cloud.zip
+
+Spring boot maven plugin:
+
+    mvn spring-boot:help 
+
 
