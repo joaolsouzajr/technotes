@@ -165,3 +165,17 @@ i
 #### Reset credential
 
 	git config --system --unset credential.helper
+
+
+modify your commit message,
+
+	git commit --amend -m "New commit message"
+
+Rename your branch name.
+
+	git branch -m current-branch-name new-branch-name
+
+Display the commit history
+
+
+https://www.digitalocean.com/community/tutorials/how-to-use-git-a-reference-guide
