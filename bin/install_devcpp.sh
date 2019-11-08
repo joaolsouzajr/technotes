@@ -9,7 +9,27 @@ aptcmd()
   #rbenv dependencies to install ruby 
   apt-get install libssl-dev -y
   apt-get install libreadline-dev -y
-    
+  # cmake
+  apt-get install cmake -y
+  #C/C++ libs
+  apt-get install libgtk2.0-dev -y
+  apt-get install libavcodec-dev -y
+  apt-get install libavformat-dev -y
+  apt-get install libswscale-dev -y
+  apt-get install g++-multilib -y
+  apt-get install pkg-config -y
+  #C/C++ libs i386
+  dpkg --add-architecture i386
+  apt-get update
+  apt-get install libc6-dev-i386 -y
+  apt-get install libstdc++6:i386 -y
+  apt-get install libgcc1:i386 -y
+  apt-get install libncurses5:i386 -y   
+  apt-get install libgtk2.0-0:i386 -y
+  apt-get install libgtk2.0-dev:i386 -y
+  apt-get install libavcodec-dev:i386 -y
+  apt-get install libavformat-dev:i386 -y
+  apt-get install libswscale-dev:i386 -y
 }
 
 

@@ -11,11 +11,13 @@ aptcmd()
 	apt-get install	zsh -y
 	apt-get install zip -y
 	apt-get install curl -y
+	apt-get install wget -y
 	apt-get install dkms -y
 	apt-get install sudo -y
   	apt-get install net-tools -y
   	apt-get instlal openssh-server -y
 	apt-get install apt-transport-https -y
+	apt-get install tmux -y
 }
 
 dnfcmd()
@@ -33,6 +35,7 @@ dnfcmd()
 	#rpmfusion no free
 	su -c 'dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm'
 	dnf install unrar -y
+	dnf install tmux -y
 }
 
 apt-get --help > /dev/null 2>&1
