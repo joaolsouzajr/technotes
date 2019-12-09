@@ -171,3 +171,21 @@ $ gpg --edit-key
   mount -a
   lvextend -L +16G /dev/mapper/mylaptop--vg-var
   resize2fs /dev/mapper/mylaptop--vg-var
+
+
+GRUB_CMDLINE_LINUX_DEFAULT="text"
+GRUB_TERMINAL=console
+
+After saving changes you need to run:
+
+sudo update-grub
+sudo systemctl enable multi-user.target --force
+sudo systemctl set-default multi-user.target
+
+Undoing text-mode
+
+To undo sudo systemctl set-default multi-user.target simply type
+
+sudo systemctl enable graphical.target --force
+sudo systemctl set-default graphical.target 
+
