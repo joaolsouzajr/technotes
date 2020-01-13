@@ -18,6 +18,10 @@ aptcmd()
   apt-get install libswscale-dev -y
   apt-get install g++-multilib -y
   apt-get install pkg-config -y
+  apt-get install libncurses5 -y
+  apt-get install libusb-0.1-4 -y
+  apt-get install libgconf-2-4 -y
+  apt-get install libtinfo5 -y
   #C/C++ libs i386
   dpkg --add-architecture i386
   apt-get update
