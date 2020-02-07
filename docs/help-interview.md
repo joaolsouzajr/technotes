@@ -49,3 +49,6 @@ The history of Angular:
 
 * https://blog.risingstack.com/angularjs-to-angular-history-and-tips-to-get-started/
 
+
+https://docs.oracle.com/javase/8/docs/technotes/guides/collections/overview.html
+
