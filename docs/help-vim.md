@@ -48,6 +48,7 @@ Deletando 5 linhas: 5dd
 Desfaser: u
 Desfazer nudanças na ultima linha editada: U
 Refazer: <Ctrl + r>
+Selecionando texto <V> 
 Susbestituir palavras em todo o arquivo: % s/[antigo]/[novo]
 Substituir palavras na linha atual: s/[antigo]/[novo]
 Substituir palavras da linha 1 a 10: 1,10 s/[antigo]/[novo]
@@ -73,19 +74,15 @@ Visualizar resultado da pesquisa
     :cp #selecionar arquivo anterior
 
 
+Plugins:
 
-
-
-
-plugins:
-
-[pathogen.vim](https://github.com/tpope/vim-pathogen)
-[ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
-[nerdtree](https://github.com/scrooloose/nerdtree)
-[syntastic](https://github.com/scrooloose/syntastic)
-[vim-hybrid](https://github.com/w0ng/vim-hybrid)
-[vim-javascript](https://github.com/pangloss/vim-javascript)
-[vim-javascript-syntax](https://github.com/jelera/vim-javascript-syntax)
+* [pathogen.vim](https://github.com/tpope/vim-pathogen)
+* [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim)
+* [nerdtree](https://github.com/scrooloose/nerdtree)
+* [syntastic](https://github.com/scrooloose/syntastic)
+* [vim-hybrid](https://github.com/w0ng/vim-hybrid)
+* [vim-javascript](https://github.com/pangloss/vim-javascript)
+* [vim-javascript-syntax](https://github.com/jelera/vim-javascript-syntax)
 
 
 ## vimrc

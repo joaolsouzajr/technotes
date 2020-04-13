@@ -111,10 +111,17 @@ find . -type d -name 'gissaBroker'
 ctrl-b c   Create a new window
 ctrl-b n   Change to next window
 ctrl-b p   Change to previous window
+ctrl-b &   Kill window
+ctrl-b ,   name window
+ctrl-b f   find window
 ctrl-b "   Split pane horizontally
 ctrl-b %   Split pane vertically
-ctrl-b ,   Rename current window
 ctrl-b o   Move to next pane
+ctrl-b x   Kill pane
+ctrl-b q   Show pane numbers
+
+[More Tmux commands](https://gist.github.com/MohamedAlaa/2961058)
+
 
 ## Criptografia
 

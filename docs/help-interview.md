@@ -21,7 +21,6 @@ https://www.baeldung.com/java-8-new-features
 
 3. What type of annotations feine the bean to DI in Spring 5?
 
-
 4. Advantages to use frameworks like Angular
 
 * to decouple DOM manipulation from application logic. The difficulty of this is dramatically affected by the way the code is structured.
@@ -42,7 +41,6 @@ https://www.baeldung.com/java-8-new-features
     https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps
     https://developers.google.com/web/progressive-web-apps/
 * Serveless Computing
-
 
 
 The history of Angular:

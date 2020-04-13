@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=IntelliJ IDEA Community
+Comment=IntelliJ IDEA Community
+Icon=/home/joaolourenco/Apps/intellij/ideaIC-2019.3.2/idea-IC-193.6015.39/bin/idea.png
+Exec=sh /home/joaolourenco/Apps/intellij/ideaIC-2019.3.2/idea-IC-193.6015.39/bin/idea.sh
+Terminal=false
