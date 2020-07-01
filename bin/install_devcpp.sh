@@ -22,6 +22,11 @@ aptcmd()
   apt-get install libusb-0.1-4 -y
   apt-get install libgconf-2-4 -y
   apt-get install libtinfo5 -y
+  #ARM developer
+  apt-get binutils-arm-none-eabi gcc-arm-none-eabi gdb-arm-none-eabi
+  apt-get install binutils-msp430 gcc-msp430 msp430-libc
+  apt-get install binutils-avr gcc-avr gdb-avr avr-libc avrdude 
+  doxygen srecord git
   #C/C++ libs i386
   dpkg --add-architecture i386
   apt-get update

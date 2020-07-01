@@ -1,5 +1,7 @@
 #!/bin/sh
 
+export PATH=$PATH:$HOME/.local/bin/
+
 #OpenJDK
 #export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.60.x86_64
 
@@ -21,6 +23,9 @@ export PATH=$PATH:$GROOVY_HOME/bin
 export PATH=$PATH:$GRADLE_HOME/bin
 
 export ANDROID_SDK_ROOT=$HOME/Android/Sdk
+
+export MSP430_GCC_HOME=/home/joaolourenco/toolchain/ti/msp430-gcc
+export PATH=$PATH:$MSP430_GCC_HOME/bin
 
 #export JBOSS_HOME=$HOME/Dev/atlantico/coelce/dev/appserver/wildfly-8.1.0.Final
 #export PATH=$PATH:$JBOSS_HOME/bin
