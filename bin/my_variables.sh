@@ -24,7 +24,7 @@ export PATH=$PATH:$GRADLE_HOME/bin
 
 export ANDROID_SDK_ROOT=$HOME/Android/Sdk
 
-export MSP430_GCC_HOME=/home/joaolourenco/toolchain/ti/msp430-gcc
+export MSP430_GCC_HOME=$HOME/toolchain/ti/msp430-gcc
 export PATH=$PATH:$MSP430_GCC_HOME/bin
 
 #export JBOSS_HOME=$HOME/Dev/atlantico/coelce/dev/appserver/wildfly-8.1.0.Final

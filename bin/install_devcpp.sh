@@ -5,7 +5,7 @@ aptcmd()
   apt-get install build-essential -y
 	apt-get install linux-headers-$(uname -r) -y
   #python virtual enviroment
-  apt-get install python3-venv -y
+  #apt-get install python3-venv -y
   #rbenv dependencies to install ruby 
   apt-get install libssl-dev -y
   apt-get install libreadline-dev -y

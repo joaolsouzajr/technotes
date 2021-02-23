@@ -34,4 +34,13 @@ sudo ./go.sh
 wget https://download.nvidia.com/XFree86/Linux-x86_64/460.39/NVIDIA-Linux-x86_64-460.39.run
 
 
+apt purge *nvidia*
+
+apt install --reinstall xserver-xorg-core xserver-xorg-video-nouveau
+
+ X -configure
+
+
+
+
 
