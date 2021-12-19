@@ -15,17 +15,17 @@ export PATH=$PATH:$M2_HOME/bin
 export GRADLE_HOME=$HOME/.sdkman/candidates/gradle/current
 export GRADLE_OPTS=-Xms256m' '-Xmx512m
 
-export GRAILS_HOME=$HOME/.sdkman/candidates/grails/current
+#export GRAILS_HOME=$HOME/.sdkman/candidates/grails/current
 
-export GROOVY_HOME=$HOME/.sdkman/candidates/groovy/current
+#export GROOVY_HOME=$HOME/.sdkman/candidates/groovy/current
 
 export PATH=$PATH:$GROOVY_HOME/bin
 export PATH=$PATH:$GRADLE_HOME/bin
 
-export ANDROID_SDK_ROOT=$HOME/Android/Sdk
+#export ANDROID_SDK_ROOT=$HOME/Android/Sdk
 
-export MSP430_GCC_HOME=$HOME/toolchain/ti/msp430-gcc
-export PATH=$PATH:$MSP430_GCC_HOME/bin
+#export MSP430_GCC_HOME=$HOME/toolchain/ti/msp430-gcc
+#export PATH=$PATH:$MSP430_GCC_HOME/bin
 
 #export JBOSS_HOME=$HOME/Dev/atlantico/coelce/dev/appserver/wildfly-8.1.0.Final
 #export PATH=$PATH:$JBOSS_HOME/bin

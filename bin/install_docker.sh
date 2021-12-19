@@ -6,20 +6,21 @@ aptcmd()
     apt-get remove docker docker-engine docker.io containerd runc
     apt-get update
     apt-get install \
-        apt-transport-https \
         ca-certificates \
         curl \
-        gnupg2 \
-        software-properties-common
-    curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
-    apt-key fingerprint 0EBFCD88
-    add-apt-repository \
-        "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
+        gnupg \
+	lsb-release
+    osname="$(lsb_release -si | tr '[:upper:]' '[:lower:]')"
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+    echo \ 
+	    "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+	    $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 }
 
 dnfcmd()
 {
     echo "Uninstall old versions"
+    osname="$(lsb_release -si | tr '[:upper:]' '[:lower:]')"
     sudo dnf remove docker \
         docker-common \
         docker-selinux \
@@ -30,7 +31,7 @@ dnfcmd()
     sudo dnf -y install dnf-plugins-core
     sudo dnf config-manager \
         --add-repo \
-        https://download.docker.com/linux/fedora/docker-ce.repo
+        https://download.docker.com/linux/$osname/docker-ce.repo
     echo "Install Docker CE"
     sudo dnf install docker-ce
 }

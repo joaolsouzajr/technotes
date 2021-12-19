@@ -177,5 +177,5 @@ Rename your branch name.
 
 Display the commit history
 
-
+	
 https://www.digitalocean.com/community/tutorials/how-to-use-git-a-reference-guide

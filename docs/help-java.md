@@ -32,6 +32,16 @@ https://www.infoq.com/br/articles/java-10-var-type/
 https://www.pluralsight.com/blog/software-development/java-9-new-features
 https://www.infoq.com/br/news/2013/10/tudo-sobre-java-8/    
 
+## Simple
+
+javac -cp <classes folder> -d <classes folder taget> project/src/demo/Simple.java
+
+java -cp <classes folder> <Main class>
+
+javadoc -d <documentation path>
+	-sourcepath <source code path>
+	-subpackages <name of the root packages>
+
 ## Tools
 
 * VSCode
@@ -56,7 +66,7 @@ https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
 
 Create a project
 
-mvn archetype:generate "-DgroupId=lab.java" "-DartifactId=app" "-DarchetypeArtifactId=maven-archetype-quickstart" "-DarchetypeVersion=1.4" "-DinteractiveMode=false"
+mvn archetype:generate "-DgroupId=lab.java" "-DartifdactId=app" "-DarchetypeArtifactId=maven-archetype-quickstart" "-DarchetypeVersion=1.4" "-DinteractiveMode=false"
 
 mvn archetype:generate "-DgroupId=lab.java" "-DartifactId=app" "-DarchetypeArtifactId=maven-archetype-quickstart" "-DinteractiveMode=false"
 
@@ -77,7 +87,7 @@ Command to see all options:
 Options summary:
 
 * groupId, artifactId version, name, description and packageName
-* dependencies  
+* dependencies
 * type (maven-project, gradle-project)
 * javaVersion (1.8, 11, 12)
 * bootVersion
@@ -116,3 +126,21 @@ Scripts:
     jshell> /save mysnippets.jsh
     
     jshell mysnippets.jsh
+
+
+## Documentation
+
+Java Tutorial Java8+ https://docs.oracle.com/javase/tutorial/tutorialLearningPaths.html
+
+JDK 17 https://docs.oracle.com/en/java/javase/17/books.html
+
+
+https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/InputStreamReader.html
+
+https://docs.oracle.com/en/java/javase/17/docs/api/help-doc.html
+
+https://docs.oracle.com/en/java/javase/11/docs/api/
+
+https://www.oracle.com/java/technologies/javase/jdk8-jre8-suported-locales.html
+
+Guide for java stream https://dzone.com/articles/your-guide-to-java-streams-tutorials-and-articles

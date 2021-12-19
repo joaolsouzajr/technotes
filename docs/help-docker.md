@@ -66,11 +66,36 @@ Network
 
 		docker network inspect bridge
 
+Detach
+
+The --detach option and started the program in the background.
+This means that the program started but isn’t attached to your terminal.
+
+
+--interactive tells Docker to keep the standard input
+stream (stdin) open for the container even if no terminal is attached.
+
+--tty option tells Docker to allocate a virtual terminal for the container, which will allow you to pass signals to the container.
+
+Example
+
+sudo docker run -d --name web nginx:latest 
+sudo docker run -d --name mailer dockerinaction/ch2_mailer 
+sudo docker run -it --link web:web --name web_test busybox:latest /bin/sh
+sudo docker run -it --name agent \ 
+	--link web:insideweb \
+	--link mailer:insidemailer \
+	dockerinaction/ch2_agent
+
 ## Observations
 
 Add user to docker group, because any commands need sudo permission
 
+sudo groupadd docker
+sudo usermod -aG docker $USER
 sudo usermod -aG docker $(whoami)
+
+https://docs.docker.com/engine/install/linux-postinstall/
 
 ## Build Image
 
@@ -99,5 +124,11 @@ sudo usermod -aG docker $(whoami)
 		
 #cria novo arquivo em tmp
 docker run -it -v $PWD/volume:/tmp fedora touch /tmp/novoarq.txt
+
+## Docker Compose
+
+https://github.com/docker/compose/releases/download/v2.0.1/docker-compose-linux-x86_64
+
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.0.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
 

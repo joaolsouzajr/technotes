@@ -196,3 +196,32 @@ To undo sudo systemctl set-default multi-user.target simply type
 sudo systemctl enable graphical.target --force
 sudo systemctl set-default graphical.target 
 
+## Image Magick
+
+```
+convert original.jpg -colorspace Gray gray.jpg
+```
+
+```
+mogrify -flip *.jpg
+
+mogrify -flop *.jpg
+```
+
+PipeWire
+
+https://ubuntuhandbook.org/index.php/2021/05/install-latest-pipewire-ppa-ubuntu-20-04/
+
+https://ubuntuhandbook.org/index.php/2021/05/enable-pipewire-audio-service-ubuntu-21-04/
+
+* create an empty file /etc/pipewire/media-session.d/with-alsa
+
+* copy /usr/share/doc/pipewire/examples/alsa.conf.d/99-pipewire-default.conf
+  into /etc/alsa/conf.d/
+  
+  cp /usr/share/doc/pipewire/examples/alsa.conf.d/99-pipewire-default.conf /etc/alsa/conf.d/
+
+
+
+
+
