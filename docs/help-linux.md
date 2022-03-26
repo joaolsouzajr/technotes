@@ -40,6 +40,9 @@
 
         ps aux | grepe [filtro]
 
+### Listar processo ativos filtrando pelo porta em uso
+
+        sudo lsof -i :[PORT]    
 
 ## Formatar PenDrive
 

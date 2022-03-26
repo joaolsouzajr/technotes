@@ -6,7 +6,6 @@ How to create web applications:
 ## Desktop applications
 
 electron
-
 Java
 Python
 NodeJS
@@ -24,7 +23,7 @@ Rust
 
 Unit Test: spock, junit5
 Web Framewok: spring, micronaut (need comparation)
-Queues: Apache Camel, Kafka
+Queues: Apache Camel, Kafka, RabbitMQ
 
 #### Python
 

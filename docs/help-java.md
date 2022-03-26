@@ -44,9 +44,10 @@ javadoc -d <documentation path>
 
 ## Tools
 
-* VSCode
+* [VSCode](https://code.visualstudio.com/)
 * Eclipse
 * Intelij IDE
+* [SDKman](https://sdkman.io/)
 * Maven
 * Gradle
 * [LiveReload](http://livereload.com/)
