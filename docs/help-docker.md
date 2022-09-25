@@ -131,4 +131,14 @@ https://github.com/docker/compose/releases/download/v2.0.1/docker-compose-linux-
 
 sudo curl -L "https://github.com/docker/compose/releases/download/v2.0.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
+## Docker on MacOS
+
+The Docker need a virtual desktop to run docker images on Windows and MacOS, but in 2022 the tools Docker Descktop 
+provided by Docker was closed for enterprise projects, and is necessarya subscription to get access for this app.
+An alternativies solutions are:
+
+1. Use Vagrant as Docker provider.
+2. Use colima tools.
+
+
 

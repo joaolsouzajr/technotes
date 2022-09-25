@@ -7,7 +7,9 @@ Use the [Homebrew](https://brew.sh/)
 
 Commands:
 
-    brew install wget
+    brew install [pkg]
+    brew info [pkg]
+    bre search [pkg]
 
 ### C/C++
 
@@ -36,3 +38,6 @@ See [help-rust.md](./help-rust.md)
 
 See [help-dotnet.md](./help-dotnet.md)
 
+### Zotero Plugins
+
+https://github.com/tefkah/zotero-night/releases
