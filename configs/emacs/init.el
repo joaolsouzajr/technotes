@@ -19,6 +19,7 @@
 (require 'package)
 
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
+			 ("gnu" . "http://elpa.gnu.org/packages/")
                          ("org" . "https://orgmode.org/elpa/")
                          ("elpa" . "https://elpa.gnu.org/packages/")))
 
@@ -97,6 +98,7 @@
   :config
   (ivy-mode 1))
 
+
 (use-package command-log-mode
   :commands command-log-mode)
 
@@ -127,6 +129,7 @@
   :bind (("M-x" . 'counsel-M-x)
 	 ("C-x b" . 'counsel-ibuffer)
 	 ("C-x C-f" . 'counsel-find-file)
+	 ("C-M-j" . 'counsel-switch-buffer)
 	 :map minibuffer-local-map
          ("C-r" . 'counsel-minibuffer-history)))
 
@@ -140,3 +143,140 @@
   ([remap describe-command] . helpful-command)
   ([remap describe-variable] . counsel-describe-variable)
   ([remap describe-key] . helpful-key))
+
+
+(use-package hydra)
+
+(defhydra hydra-text-scale (:timeout 4)
+  "scale text"
+  ("j" text-scale-increase "in")
+  ("k" text-scale-decrease "out")
+  ("f" nil "finished" :exit t))
+
+(use-package projectile
+  :diminish projectile-mode
+  :config (projectile-mode)
+  :custom ((projectile-completion-system 'ivy))
+  :bind-keymap
+  ("C-c p" . projectile-command-map)
+  :init
+  ;; NOTE: Set this to the folder where you keep your Git repos!
+  (when (file-directory-p "~/Labs")
+    (setq projectile-project-search-path '("~/Labs")))
+  (setq projectile-switch-project-action #'projectile-dired))
+
+(use-package counsel-projectile
+  :after projectile
+  :config (counsel-projectile-mode))
+
+(use-package magit
+  :commands magit-status
+  :custom
+  (magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1))
+
+(use-package forge)
+
+(use-package org)
+
+(defun efs/lsp-mode-setup ()
+  (setq lsp-headerline-breadcrumb-segments '(path-up-to-project file symbols))
+  (lsp-headerline-breadcrumb-mode))
+
+(use-package lsp-mode
+  :commands (lsp lsp-deferred)
+  :hook (lsp-mode . efs/lsp-mode-setup)
+  :init
+  (setq lsp-keymap-prefix "C-c l")  ;; Or 'C-l', 's-l'
+  :config
+  (lsp-enable-which-key-integration t)
+  (add-hook 'lsp-mode-hook 'lsp-ui-mode))
+
+(use-package lsp-ui
+  :hook (lsp-mode . lsp-ui-mode)
+  :custom
+  (lsp-ui-doc-position 'bottom)
+  (lsp-ui-peek-always-show t)
+  (lsp-ui-sideline-show-hover t)
+  (lsp-ui-doc-enable t))
+
+;; (use-package vertico
+  ;; :ensure t
+  ;; :config
+  ;; (vertico-mode))
+
+;; (use-package marginalia
+  ;; :ensure t
+  ;; :config
+  ;; (marginalia-mode))
+
+;; (use-package orderless
+  ;; :ensure t
+  ;; :config
+  ;; (setq completion-styles '(orderless)))
+
+;; (use-package consult
+  ;; :ensure t)
+
+(use-package company
+  :after lsp-mode
+  :hook (lsp-mode . company-mode)
+  :bind (:map company-active-map
+	      ("<tab>" . company-complete-selection))
+  (:map lsp-mode-map
+	("<tab>" . company-indent-or-complete-common))
+  :custom
+  (company-minimum-prefix-length 1)
+  (company-idle-delay 0.0))
+
+(use-package company-box
+  :ensure t
+  :hook
+  (company-mode . company-box-mode))
+
+(use-package lsp-treemacs
+  :after lsp)
+
+(use-package lsp-ivy
+  :after lsp)
+
+(use-package evil-nerd-commenter
+  :bind ("M-/" . evilnc-comment-or-uncomment-lines))
+
+(use-package python-mode
+  :ensure t
+  :hook (python-mode . lsp-deferred)
+  :custom
+  ;; NOTE: Set these if Python 3 is called "python3" on your system!
+  ;; (python-shell-interpreter "python3")
+  ;; (dap-python-executable "python3")
+  (dap-python-debugger 'debugpy)
+  :config
+  (require 'dap-python))
+
+(use-package rustic
+  :ensure t
+  :hook (rustic . lsp-deferred)
+  ;; :bind (:map rustic-mode-map
+            ;; ("M-j" . lsp-ui-imenu)
+            ;; ("M-?" . lsp-find-references)
+	    ;; ("C-c C-c l" . flycheck-list-errors)
+            ;; ("C-c C-c a" . lsp-execute-code-action)
+            ;; ("C-c C-c r" . lsp-rename)
+            ;; ("C-c C-c q" . lsp-workspace-restart)
+            ;; ("C-c C-c Q" . lsp-workspace-shutdown)
+            ;; ("C-c C-c s" . lsp-rust-analyzer-status)
+            ;; ("C-c C-c e" . lsp-rust-analyzer-expand-macro)
+            ;; ("C-c C-c d" . dap-hydra)
+            ;; ("C-c C-c h" . lsp-ui-doc-glance))
+  :config
+  (require 'lsp-rust)
+  (setq lsp-rust-analyzer-completion-add-call-parenthesis nil))
+
+(use-package toml-mode :ensure)
+
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
+
+;;(global-set-key (kbd "C-M-j") 'counsel-switch-buffer)
