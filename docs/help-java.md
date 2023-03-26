@@ -106,6 +106,36 @@ Spring boot maven plugin:
     mvn spring-boot:help 
 
 
+Tasks for uberjar
+
+```groovy
+jar {
+    archiveFileName = 'capital-gains.jar'
+    manifest {
+        attributes("Implementation-Title": "capital-gains",
+                "Implementation-Version": version,
+                "Main-Class": application.mainClass)
+    }
+}
+
+task uberJar(type: Jar, description: 'Package up files used for generating documentation.') {
+    archiveFileName = 'capital-gains.jar'
+
+    manifest {
+        attributes("Implementation-Title": "capital-gains",
+                "Implementation-Version": version,
+                "Main-Class": application.mainClass)
+    }
+
+    from sourceSets.main.output
+
+    dependsOn configurations.runtimeClasspath
+    from {
+        configurations.runtimeClasspath.findAll { it.name.endsWith('jar') }.collect { zipTree(it) }
+    }
+}
+```
+
 ## Java 11
 
 ### Jshell

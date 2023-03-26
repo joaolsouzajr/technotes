@@ -1,3 +1,4 @@
+
 # Docker help
 
 ## Commands
@@ -5,7 +6,6 @@
 Concept.
 
 		docker <subcommand> <subcommand params> <target command>
-
 Search for a suitable image
 
 		docker search <text>
@@ -140,5 +140,18 @@ An alternativies solutions are:
 1. Use Vagrant as Docker provider.
 2. Use colima tools.
 
+brew install colima
+brew install docker #just dcocker CLI
+brew install docker compose
 
+colima start #start qemu VM
+
+#then proceed with docker command normaly
+
+
+
+## Dcoker and gradle
+
+https://codefresh.io/docs/docs/learn-by-example/java/gradle/
+https://ckinan.com/blog/remote-debug-spring-boot-docker-intellij/
 

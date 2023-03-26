@@ -235,15 +235,18 @@ Application Servers:
 
 ### Java EE 8
 
-Principal Vendor:
+Principal Vendor: Oracle
 
-Mantainers:
+Mantainers: JCP
 
 Main features:
+https://www.oracle.com/java/technologies/java-ee-8.html
 
 Reference implmentations:
 
 Application Servers:
+
+
 
 ## Monolictic Arcchitecture
 

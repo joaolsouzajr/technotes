@@ -225,6 +225,31 @@ https://ubuntuhandbook.org/index.php/2021/05/enable-pipewire-audio-service-ubunt
   cp /usr/share/doc/pipewire/examples/alsa.conf.d/99-pipewire-default.conf /etc/alsa/conf.d/
 
 
+## SSH Keys
+
+Gerar chaves
+
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+Criar arquivo de configuração
+
+tocuh ~/.ssh/config
+
+Exemplos
+
+Host github.com
+	HostName github.com
+	User git
+	IdentityFile ~/.ssh/_id_rsa
+	IdentitiesOnly yes
+  
+Host bitbucket-corporate
+	HostName bitbucket.org
+    User git
+    IdentityFile ~/.ssh/id_rsa_corp
+    IdentitiesOnly yes
 
 
 
