@@ -163,6 +163,7 @@
   ([remap describe-variable] . counsel-describe-variable)
   ([remap describe-key] . helpful-key))
 
+(use-package hydra)
 
 (defhydra hydra-text-scale (:timeout 4)
   "scale text"
@@ -174,8 +175,6 @@
 ;  "zoom"
 ;  ("g" text-scale-increase "in")
 ;  ("l" text-scale-decrease "out"))
-
-(use-package hydra)
 
 (use-package projectile
   :diminish projectile-mode
@@ -266,14 +265,14 @@
   (require 'dap-java)
   (require 'dap-hydra)
   (require 'dap-gdb-lldb)
-  (dap-gdb-lldb-setup)
+  (dap-gdb-lldb-setup))
   ; (setq dap-lldb-debug-program '("/usr/local/Cellar/llvm/11.1.0/bin/lldb-vscode")))
 
   ;; Bind `C-c l d` to `dap-hydra` for easy access
-  (general-define-key
-    :keymaps 'lsp-mode-map
-    :prefix lsp-keymap-prefix
-    "d" '(dap-hydra t :wk "debugger")))
+  ;; (general-define-key
+    ;; :keymaps 'lsp-mode-map
+    ;; :prefix lsp-keymap-prefix
+    ;; "d" '(dap-hydra t :wk "debugger")))
 
 
 ;; (use-package vertico
@@ -524,3 +523,17 @@
      (define-key clojure-mode-map (kbd "C-c u") 'cider-user-ns)
      (define-key cider-mode-map (kbd "C-c u") 'cider-user-ns)))
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (cider clojure-mode-extra-font-locking clojure-mode paredit go-tag go-mode helm-lsp helm lsp-java yasnippet typescript-mode toml-mode rustic python-mode evil-nerd-commenter lsp-ivy company-box company dap-mode lsp-ui lsp-mode flycheck forge magit counsel-projectile projectile hydra which-key use-package ivy-rich helpful exec-path-from-shell doom-themes doom-modeline counsel command-log-mode all-the-icons))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
