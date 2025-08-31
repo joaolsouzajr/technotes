@@ -12,48 +12,48 @@
 
 ## Tabs
 
-:tabedit {file}   edit specified file in a new tab
-:tabfind {file}   open a new tab with filename given, searching the 'path' to find it
-:tabclose         close current tab
-:tabclose {i}     close i-th tab
-:tabs         list all tabs including their displayed windows
-:tabm {i}     move current tab to position i+1
-:tabn         go to next tab
-:tabp         go to previous tab
-gt            go to next tab
-gT            go to previous tab
-{i}gt         go to tab in position i
+* :tabedit {file}   edit specified file in a new tab
+* :tabfind {file}   open a new tab with filename given, searching the 'path' to find it
+* :tabclose         close current tab
+* :tabclose {i}     close i-th tab
+* :tabs         list all tabs including their displayed windows
+* :tabm {i}     move current tab to position i+1
+* :tabn         go to next tab
+* :tabp         go to previous tab
+* gt            go to next tab
+* gT            go to previous tab
+* {i}gt         go to tab in position i
 
 ## Windows Split
 
-:split horizontal split
-:vsplit vertical split
+* :split horizontal split
+* :vsplit vertical split
 
 Redimensionar
 
-split:  Ctrl-w + ou Ctrl-w -
-vsplit: Ctrl-w > ou Ctrl-w <
-Ctrl-w =
-Ctrl-w |
-Ctrl-w _
+* split:  Ctrl-w + ou Ctrl-w -
+* vsplit: Ctrl-w > ou Ctrl-w <
+* Ctrl-w =
+* Ctrl-w |
+* Ctrl-w _
 
 ## Manipulação de Texto 
 
-Copiando linha atual: yy
-Copiando 5 linhas: 5yy
-Colando : "+p
-Colando o que estiver no clipboard: <Shift + Insert>
-Deletando linha atual: dd
-Deletando 5 linhas: 5dd
-Desfaser: u
-Desfazer nudanças na ultima linha editada: U
-Refazer: <Ctrl + r>
-Selecionando texto <V> 
-Susbestituir palavras em todo o arquivo: % s/[antigo]/[novo]
-Substituir palavras na linha atual: s/[antigo]/[novo]
-Substituir palavras da linha 1 a 10: 1,10 s/[antigo]/[novo]
-Substituir palavras da linha 1 até o final: 1,$ s/[antigo]/[novo]
-Ignorando maisculas e minusculas na pesquisa: /\c[palavra]
+* Copiando linha atual: yy
+* Copiando 5 linhas: 5yy
+* Colando : "+p
+* Colando o que estiver no clipboard: <Shift + Insert>
+* Deletando linha atual: dd
+* Deletando 5 linhas: 5dd
+* Desfaser: u
+* Desfazer nudanças na ultima linha editada: U
+* Refazer: <Ctrl + r>
+* Selecionando texto <V> 
+* Susbestituir palavras em todo o arquivo: % s/[antigo]/[novo]
+* Substituir palavras na linha atual: s/[antigo]/[novo]
+* Substituir palavras da linha 1 a 10: 1,10 s/[antigo]/[novo]
+* Substituir palavras da linha 1 até o final: 1,$ s/[antigo]/[novo]
+* Ignorando maisculas e minusculas na pesquisa: /\c[palavra]
 
 n #next
 N #previus
